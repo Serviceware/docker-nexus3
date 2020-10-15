@@ -37,8 +37,9 @@ LABEL name="Nexus Repository Manager" \
       io.openshift.tags="Sonatype,Nexus,Repository Manager"
 
 ARG NEXUS_VERSION=3.28.0-01
-ARG NEXUS_DOWNLOAD_URL=https://download.sonatype.com/nexus/3/nexus-${NEXUS_VERSION}-unix.tar.gz
-ARG NEXUS_DOWNLOAD_SHA256_HASH=17bc9f06c6616f51856e55afd5daab9934fdb1b39b133442987db311e716cd40
+#ARG NEXUS_DOWNLOAD_URL=https://download.sonatype.com/nexus/3/nexus-${NEXUS_VERSION}-unix.tar.gz
+ARG NEXUS_DOWNLOAD_URL=http://192.168.1.25:8000/nexus-${NEXUS_VERSION}-unix.tar.gz
+ARG NEXUS_DOWNLOAD_SHA256_HASH=55ed143fcbcf2f500e432634ae7c1a196d731a7e665902f85aeab4ce95ffcd73
 
 # configure nexus runtime
 ENV SONATYPE_DIR=/opt/sonatype
